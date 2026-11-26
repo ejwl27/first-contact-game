@@ -77,7 +77,7 @@
   .lane .st { font-size: 12.5px; color: var(--ink2); text-align: right; }
 
   /* game */
-  #game { display: none; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 14px; padding: 12px 18px 40px; }
+  #game { display: none; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 14px; padding: 12px 18px 40px; }
   .half { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 14px; min-width: 0; }
   .half.ai { box-shadow: inset 0 3px 0 var(--ai); }
   .half.me { box-shadow: inset 0 3px 0 var(--me); }
@@ -231,13 +231,6 @@
 <div id="race"></div>
 
 <main id="game">
-  <section class="half ai">
-    <div class="hh"><h2>🤖 AI 대 AI</h2><span class="tag" id="aiTag"></span></div>
-    <div class="scene" id="aiScene"></div>
-    <div class="box"><h3>AI 진행 <span class="hint" id="aiMaskNote"></span></h3><div class="log" id="aiLog"></div></div>
-    <div id="aiAnalysis"></div>
-  </section>
-
   <section class="half me">
     <div class="hh"><h2>🧑‍🚀 나</h2><span class="tag" id="meTag"></span></div>
     <div class="scene" id="meScene"></div>
@@ -255,6 +248,13 @@
     <div class="box"><h3>📗 내 단어장 <span class="hint">단어마다 뜻을 짐작해 적어 두세요 · 단어를 누르면 메모에서 그 단어가 노랗게 표시돼요</span></h3><div class="notes" id="noteBox"></div></div>
     <div class="box"><h3>📒 내 메모</h3><div class="log" id="meLog"></div></div>
     <div class="box heat"><h3><label class="toggle"><input type="checkbox" id="helpOn"> AI 조수: 내 증거로 계산한 확률표 (켜면 별 하나 감점)</label></h3><div id="meHeat"></div></div>
+  </section>
+
+  <section class="half ai">
+    <div class="hh"><h2>🤖 AI</h2><span class="tag" id="aiTag"></span></div>
+    <div class="scene" id="aiScene"></div>
+    <div class="box"><h3>AI 진행 <span class="hint" id="aiMaskNote"></span></h3><div class="log" id="aiLog"></div></div>
+    <div id="aiAnalysis"></div>
   </section>
 </main>
 
